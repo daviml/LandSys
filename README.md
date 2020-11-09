@@ -13,7 +13,7 @@
 2 Ative o venv criado.
 - ~/my_venvs/unnamed/bin/activate
 3 Acesse o diretório do projeto.
-- 
+- /LandSys
 4 Aplique as migrations.
 - python manage.py migrate
 5 Execute o servidor de desenvolvimento
