@@ -1,0 +1,38 @@
+{% extends "landsys_register/base.html" %}
+
+{% block content %}
+
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>cod vendedor</td>
+            <td>nome vendedor</td>
+            <td>cod tab preços</td>
+            <td>data de nascimento</td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for landsys in landsys_listv %}
+            <tr>
+                <td>{{landsys.cdvend}}</td>
+                <td>{{landsys.dsnome}}</td>
+                <td>{{landsys.cdtab}}</td>
+                <td>{{landsys.dtnasc}}</td>
+                <td>
+                    <a href="{% url 'landsys_updatev' landsys.id %}" class="btn text-secondary px-0">
+                        <i class="far fa-edit fa-lg"></i>
+                    </a>
+                    <form class="d-inline" method="POST" action="{% url 'landsys_deletev' landsys.id %}">
+                        {% csrf_token %}
+                        <button class="btn" type="submit">
+                            <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
+

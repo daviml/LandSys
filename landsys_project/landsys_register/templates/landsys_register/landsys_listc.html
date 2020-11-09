@@ -1,0 +1,40 @@
+{% extends "landsys_register/base.html" %}
+
+{% block content %}
+
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>cod cliente</td>
+            <td>nome cliente</td>
+            <td>pessoa fisica/juridica</td>
+            <td>codigo do vendedor</td>
+            <td>limite de credito</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for landsys in landsys_listc %}
+            <tr>
+                <td>{{landsys.cdcl}}</td>
+                <td>{{landsys.dsnome}}</td>
+                <td>{{landsys.idtipo}}</td>
+                <td>{{landsys.cdvend.cdvend}}</td>
+                <td>{{landsys.dslim}}</td>
+                
+                <td>
+                    <a href="{% url 'landsys_updatec' landsys.id %}" class="btn text-secondary px-0">
+                        <i class="far fa-edit fa-lg"></i>
+                    </a>
+                    <form class="d-inline" method="POST" action="{% url 'landsys_deletec' landsys.id %}">
+                        {% csrf_token %}
+                        <button class="btn" type="submit">
+                            <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+{% endblock content %}
