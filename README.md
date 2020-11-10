@@ -2,7 +2,7 @@
 - Systema Landix
 
 # Layout
-Você pode utilizar a seguinte URL para visualizar todas as telas: [Visualizar](https://1drv.ms/u/s!Ar7JOM7peOZ9xiYZOYBtAwo1rdeE?e=8A4DDS)
+Você pode utilizar a seguinte URL para visualizar algumas das telas: [Visualizar](https://1drv.ms/u/s!Ar7JOM7peOZ9xiYZOYBtAwo1rdeE?e=8A4DDS)
 
 # Dependências
 - Pyhton 3.8+
