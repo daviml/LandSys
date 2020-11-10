@@ -25,3 +25,6 @@
 
 6 Execute o servidor de desenvolvimento
 - python manage.py runserver
+
+7 Acesse
+- localhost/landsys/
